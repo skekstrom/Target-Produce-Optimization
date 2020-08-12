@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<head>
+    <style>
+        .taskbar {
+            width: 100%;
+            height: 10em;
+            background-color: rgb(216, 134, 134);
+            padding-top: 0px;
+            margin: 0px;
+        }
+        body {
+            margin: 0px;
+        }
+        #logo_div {
+            padding-left: 1em;
+            padding-top: 1.5em;
+            float: left;
+        }
+        #title {
+            float: left;
+            padding-left: 1em;
+            padding-top: 1em;
+        }
+        #buttons {
+            float: right;
+        }
+        #title_header {
+            font-size: 50px;
+            font-family: 'Merriweather Sans', sans-serif;
+            color: rgb(184, 34, 21);
+        }
+        .menu_items {
+            display: inline;
+            float: right;
+        }
+        .home, .about {
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: bold;
+            display: block;
+            background-color: rgb(216, 134, 134);
+            text-decoration: none;
+            padding: 64px 50px;
+            color: black;
+            font-size: 28px;
+        }
+        .home:hover, .about:hover {
+            color: white;
+        }
+        .questions {
+            width: 100%;
+            height: 73.05em;
+        }
+        .button_ul {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //myAlert();
+        });
+        function myAlert(){
+            alert("hi");
+        }
+        function aboutFunction(){
+            alert("This is the temperary button action");
+        }
+        function submitForm(){
+            myAlert();
+        }
+    </script>
+</head>
+
+
+<body>
+    <header>
+        <!--This is the div for the top part of the page-->
+        <div class="taskbar">
+            <!--This is the top part of the page, Target Logo and Title-->
+            <!--First div is the target logo-->
+            <div id="logo_div">
+                <img src="target.png" width="115px" height="100px">
+            </div>
+
+            <!--Title-->
+            <div id="title">
+                <h1 id="title_header">Produce Fill Optimization</h1>
+            </div>
+
+            <!--Task Bar Buttons-->
+            <div id="buttons">
+                <!--Buttons will go here eventually-->
+                <ul class="button_ul" role="menubar">
+                    <li class="menu_items"><a class="about" role="menuitem" id="about" href="about.html">About</a></li>
+                    <li class="menu_items"><a class="home" role="menuitem" id="home" href="home.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Div for the rest of the page-->
+    <div class="questions">
+        <form class="questions_form">
+            <!--Promo 1 Questions-->
+            <h3>Promo 1</h3>
+                <ul>
+                    <li><label>Do we need plums?</label> <input class="question_radio_buttons" type="radio" name="promo1_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q1" required/>No</li>
+                    <li><label>Do we need peaches?</label> <input class="question_radio_buttons" type="radio" name="promo1_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q2" required/>No</li>
+                    <li><label>Do we need nectarines?</label> <input class="question_radio_buttons" type="radio" name="promo1_q3" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q3" required/>No</li>
+                    <li><label>Do we need mini watermelons?</label> <input class="question_radio_buttons" type="radio" name="promo1_q4" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q4" required/>No</li>
+                    <li><label>Do we need canteloupes?</label> <input class="question_radio_buttons" type="radio" name="promo1_q5" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q5" required/>No</li>
+                    <li><label>Do we need honeydew?</label> <input class="question_radio_buttons" type="radio" name="promo1_q6" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q6" required/>No</li>
+                </ul>
+            <!--Promo 2 Questions-->
+            <h3>Promo 2</h3>
+                <ul>
+                    <li><label>Do we need red grapes?</label> <input class="question_radio_buttons" type="radio" name="promo2_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q1" required/>No</li>
+                    <li><label>Do we need green grapes?</label> <input class="question_radio_buttons" type="radio" name="promo2_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q2" required/>No</li>
+                    <li><label>Do we need bagged cherries?</label> <input class="question_radio_buttons" type="radio" name="promo2_q3" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q3" required/>No</li>
+                    <li><label>Do we need packaged cherries?</label> <input class="question_radio_buttons" type="radio" name="promo2_q4" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q4" required/>No</li>
+                </ul>
+            <!--Berry Table Questions-->
+            <h3>Berry Table</h3>
+                <ul>
+                    <li><label>Do we need 1 pound strawberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                    <li><label>Do we need 2 pound strawberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q2" required/>No</li>
+                    <li><label>Do we need blueberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                    <li><label>Do we need 6 oz raspberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                    <li><label>Do we need 12 oz raspberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                    <li><label>Do we need 6oz blackberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                    <li><label>Do we need 12 oz blackberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
+                </ul>
+            <!--Wet Wall Questions-->
+            <!--Tomato Table Questions-->
+            <!--Organic Table Questions-->
+            <!--Salad Wall Questions-->
+            <!--Bagged Veggie Questions-->
+            <!--Lettuce Table Questions-->
+            <!--Potato Onion Questions-->
+            <!--Banana Table Questions-->
+            <!--Apple Table Questions-->
+            <input type="submit" value="Submit" onsubmit="submitForm()">
+        </form>
+    </div>
+</body>
+
+</html>
