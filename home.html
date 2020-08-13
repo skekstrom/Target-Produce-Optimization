@@ -58,6 +58,50 @@
             padding: 0px;
             margin: 0px;
         }
+        .table_header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 25%;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            width: 85%;
+            margin-left: 7.5%;
+            margin-right: 7.5%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Style the counter cards */
+        .cards {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
@@ -83,6 +127,7 @@
         <!--This is the div for the top part of the page-->
         <div class="taskbar">
             <!--This is the top part of the page, Target Logo and Title-->
+
             <!--First div is the target logo-->
             <div id="logo_div">
                 <img src="target.png" width="115px" height="100px">
@@ -95,6 +140,7 @@
 
             <!--Task Bar Buttons-->
             <div id="buttons">
+
                 <!--Buttons will go here eventually-->
                 <ul class="button_ul" role="menubar">
                     <li class="menu_items"><a class="about" role="menuitem" id="about" href="about.html">About</a></li>
@@ -107,43 +153,102 @@
     <!--Div for the rest of the page-->
     <div class="questions">
         <form class="questions_form">
+
             <!--Promo 1 Questions-->
-            <h3>Promo 1</h3>
-                <ul>
-                    <li><label>Do we need plums?</label> <input class="question_radio_buttons" type="radio" name="promo1_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q1" required/>No</li>
-                    <li><label>Do we need peaches?</label> <input class="question_radio_buttons" type="radio" name="promo1_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q2" required/>No</li>
-                    <li><label>Do we need nectarines?</label> <input class="question_radio_buttons" type="radio" name="promo1_q3" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q3" required/>No</li>
-                    <li><label>Do we need mini watermelons?</label> <input class="question_radio_buttons" type="radio" name="promo1_q4" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q4" required/>No</li>
-                    <li><label>Do we need canteloupes?</label> <input class="question_radio_buttons" type="radio" name="promo1_q5" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q5" required/>No</li>
-                    <li><label>Do we need honeydew?</label> <input class="question_radio_buttons" type="radio" name="promo1_q6" required/>Yes <input class="question_radio_buttons" type="radio" name="promo1_q6" required/>No</li>
-                </ul>
-            <!--Promo 2 Questions-->
-            <h3>Promo 2</h3>
-                <ul>
-                    <li><label>Do we need red grapes?</label> <input class="question_radio_buttons" type="radio" name="promo2_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q1" required/>No</li>
-                    <li><label>Do we need green grapes?</label> <input class="question_radio_buttons" type="radio" name="promo2_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q2" required/>No</li>
-                    <li><label>Do we need bagged cherries?</label> <input class="question_radio_buttons" type="radio" name="promo2_q3" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q3" required/>No</li>
-                    <li><label>Do we need packaged cherries?</label> <input class="question_radio_buttons" type="radio" name="promo2_q4" required/>Yes <input class="question_radio_buttons" type="radio" name="promo2_q4" required/>No</li>
-                </ul>
-            <!--Berry Table Questions-->
-            <h3>Berry Table</h3>
-                <ul>
-                    <li><label>Do we need 1 pound strawberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                    <li><label>Do we need 2 pound strawberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q2" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q2" required/>No</li>
-                    <li><label>Do we need blueberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                    <li><label>Do we need 6 oz raspberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                    <li><label>Do we need 12 oz raspberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                    <li><label>Do we need 6oz blackberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                    <li><label>Do we need 12 oz blackberries?</label> <input class="question_radio_buttons" type="radio" name="berry_q1" required/>Yes <input class="question_radio_buttons" type="radio" name="berry_q1" required/>No</li>
-                </ul>
-            <br/>
-            <div class="cards" style="width: 25%; padding-left: 7.5%; padding-right: 7.5%;">
-                <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/canteloupe.jpg" alt="Canteloupe" style="width: 100%;">
-                <div class="container">
-                    <button>Yes</button>
-                    <button>No</button>
+            <div class="table_header">
+                <h1>Promo 1</h1>
+            </div>
+            <div class="promo1_cards">
+
+                <!--Promo 1 Row 1-->
+                <div class="row">
+
+                    <!--Canteloupe Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/canteloupe.jpg" alt="Canteloupe" style="width: 100%;">
+                            <div class="container">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Honeydew Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <div class="cards">
+                                <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/honeydew.jpg" alt="Honeydew" style="width: 100%;">
+                                <div class="container">
+                                    <button>Yes</button>
+                                    <button>No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Mini-Watermelon Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/watermelon.jpg" alt="Mini-Watermelon" style="width: 100%;">
+                            <div class="container">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Promo 1 Row 2-->
+                <div class="row">
+                    
+                    <!--Plum Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <div class="cards">
+                                <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/plums.jpg" alt="Plums" style="width: 100%;">
+                                <div class="container">
+                                    <button>Yes</button>
+                                    <button>No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Nectarine Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/nectarine.jpg" alt="Nectarine" style="width: 100%;">
+                            <div class="container">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Peaches Card-->
+                    <div class="column">
+                        <div class="cards">
+                            <img src="https://raw.githubusercontent.com/skekstrom/Target-Produce-Optimization/master/produce_images/peaches.jpg" alt="Peaches" style="width: 100%;">
+                            <div class="container">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!--Promo 2 Questions-->
+            <div class="table_header">
+                <h1>Promo 2</h1>
+            </div>
+
+            <!--Berry Table Questions-->
+            <div class="table_header">
+                <h1>Berry Table</h1>
+            </div>
+
             <!--Wet Wall Questions-->
             <!--Tomato Table Questions-->
             <!--Organic Table Questions-->
@@ -153,9 +258,9 @@
             <!--Potato Onion Questions-->
             <!--Banana Table Questions-->
             <!--Apple Table Questions-->
+            
             <input type="submit" value="Submit" onsubmit="submitForm()">
         </form>
     </div>
 </body>
-
 </html>
